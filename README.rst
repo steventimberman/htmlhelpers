@@ -22,7 +22,7 @@ Create an html element:
 .. code-block:: py
 
    hs.p("We love volleyball!")
-   # "<p>We love volleyball!</p>"
+   # <p>We love volleyball!</p>
 
 or one with attributes:
 
@@ -36,20 +36,20 @@ Or build a hierarchy:
 .. code-block:: py
 
    hs.html(hs.p("Still love volleyball!"))
-   # "<html><p>Still love volleyball!</p></html>"
+   # <html><p>Still love volleyball!</p></html>
 
 Build a list:
 
 .. code-block:: py
 
    hs.ul("".join[hs.li("cats"), hs.li("dogs")])
-   # "<ul><li>cats</li><li>dogs</li></ul>"
+   # <ul><li>cats</li><li>dogs</li></ul>
 
 Although once a list like that begins to grow, things can start to look a little messy. For more complex html expressions, we will be using the notion on a ``tag_series`` and a ``tag_phrase``.
 
 .. code-block::
 
-   > from htmlhelpers import htmlphrase as hp
+   from htmlhelpers import htmlphrase as hp
 
 Say we have a rappidly growing list. We can use a series to quickly create many of the same html elements in succession. We can use a ``tag_series``.
 
@@ -58,14 +58,14 @@ Say we have a rappidly growing list. We can use a series to quickly create many 
    list_of_animals = ["cats", "dogs", "rabbits"]
    animals = hp.tag_series(hs.li, list_of_animals)
    hs.ul(animals)
-   # "<ul><li>cats</li><li>dogs</li><li>rabits</li></ul>"
+   # <ul><li>cats</li><li>dogs</li><li>rabits</li></ul>
 
 As the structure becomes deeper, we can further simplify our code with a ``tag_phrase``.
 
 .. code-block:: py
 
    hp.tag_phrase([hs.html, hs.div, hs.ul], animals)
-   # "<html><div><ul><li>cats</li><li>dogs</li><li>rabits</li></ul></div></html>"
+   # <html><div><ul><li>cats</li><li>dogs</li><li>rabits</li></ul></div></html>
 
 Lastly, you can format the string in a much more human readable way, by setting the ``formatting=True`` in the ``tag_series`` function.
 
