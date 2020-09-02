@@ -8,6 +8,10 @@ A simple module for building and formatting html strings in python.
 This is a package which was inspired by the annoyance of writing html strings
 when working with serving modules like flask.
 
+.. code-block:: sh
+
+   pip install htmlhelpers
+
 Basic usage
 ^^^^^^^^^^^
 
