@@ -26,7 +26,7 @@ Create an html element:
 
 or one with attributes:
 
-.. code-block::
+.. code-block:: py
 
    hs.p("We love volleyball!", attr_str='style="text-align:right"')
    # <p style="text-align:right">We love volleyball!</p>
@@ -47,7 +47,7 @@ Build a list:
 
 Although once a list like that begins to grow, things can start to look a little messy. For more complex html expressions, we will be using the notion on a ``tag_series`` and a ``tag_phrase``.
 
-.. code-block::
+.. code-block:: py
 
    from htmlhelpers import htmlphrase as hp
 
